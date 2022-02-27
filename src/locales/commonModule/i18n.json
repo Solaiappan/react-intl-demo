@@ -7,7 +7,7 @@
       "localization_keys": [
           {
             "key": "welcome",
-            "default_value": "Welcome to my app!",
+            "default_value": "Welcome to Localization app!",
             "description": "Description of the Welcome"
           }
       ]

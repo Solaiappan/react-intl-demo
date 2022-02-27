@@ -1,0 +1,77 @@
+html, body {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background-color: #F7F8FB;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+head {
+    display: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(-45deg, #8363a1 0%, #74a8c3 100%);
+    background: linear-gradient(135deg, #8363a1 0%, #74a8c3 100%);
+}
+h1.welcome {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    color: white;
+}
+
+code {
+    background-color: white;
+    color: 'black';
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: white;
+}
+.messages {
+    width: 25%;
+}
+.code {
+    width: 75%;
+}
+.messages, .code {
+    margin: 20px;
+    box-sizing: border-box;
+    height: 100%;
+}
+.line {
+    border-right: 1px solid rgba(0,0,0,0.2);
+    width: 1px;
+    height: 100px;
+}
+
+input.locale-button {
+    background-color: rgba(0,0,0,0.25);
+    border-style: solid;
+    color: white;
+    display: inline-block;
+    height: 50px;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+input.locale-button.selected {
+    background-color: rgba(30,144,255,0.6);
+}
+
+.buttons {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}

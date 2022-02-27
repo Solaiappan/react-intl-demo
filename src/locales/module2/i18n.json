@@ -7,8 +7,8 @@
       "localization_keys": [
           {
             "key": "advancedExample",
-            "default_value": "Simple Example",
-            "description": "Description of the Simple Example"
+            "default_value": "Advanced Dynamic variable Example",
+            "description": "Description of the Advanced Example"
           },
           {
             "key": "message1",

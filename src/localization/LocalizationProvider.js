@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { IntlProvider } from 'react-intl';
+import { transformLocalizationJSON } from './utils';
 
 const LocalizationProvider = ({ locale, children }) => {
   const [messages, setMessages] = useState({});
@@ -7,14 +8,14 @@ const LocalizationProvider = ({ locale, children }) => {
     useEffect(() => {
         fetch(`https://localization-schema-service.herokuapp.com/${locale}.json`)
             .then(response => response.json())
-            .then(data => setMessages(data.modules[0]))
+            .then(data => setMessages(transformLocalizationJSON(data.modules)))
             .catch((E) => console.log('Error in fetching localization.json', E));
     }, []);
     useEffect(() => {
         fetch(`https://localization-schema-service.herokuapp.com/${locale}.json`)
             .then(response => response.json())
             .then(data => {
-                setMessages(data.modules[0]);
+                setMessages(transformLocalizationJSON(data.modules));
                 setCurrentLocale(locale);
             })
             .catch((E) => console.log('Error in fetching localization.json', E));
