@@ -1,0 +1,15 @@
+{
+  "localization_modules": [
+    {
+      "name": "commonModule",
+      "version": 1,
+      "description": "Localization version for common module",
+      "localization_keys": [
+          {
+            "key": "welcome",
+            "default_value": "Welcome to my app!",
+            "description": "Description of the Welcome"
+          }
+      ]
+    }]
+}

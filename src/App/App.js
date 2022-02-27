@@ -1,27 +1,25 @@
-import React from 'react';
-import { IntlProvider, FormattedMessage } from 'react-intl';
-import MyFirstComponent from '../components/SimpleComponent';
+import React, { useState, useEffect } from 'react';
+import { FormattedMessage } from 'react-intl';
+import LocalizationProvider from '../localization/LocalizationProvider';
+import SimpleComponent from '../components/SimpleComponent';
 import AdvancedLocalization from '../components/AdvancedLocalization';
 import ComponentInjection from '../components/ComponentInjection';
-import appLocales from '../locales';
+import { commonModule } from '../localization/i18n';
 
 const App = () => {
-  // Get the locale to use. You could use Redux, useContext, URL params or local storage
-  // to manage this value.
-  const locale = 'en';
-
-  // Load the language configuration
-  const localeConfig = appLocales[locale];
-
-  // Application top component (entrypoint)
   return (
-    <IntlProvider locale={localeConfig.locale} messages={localeConfig.messages}>
+    <LocalizationProvider locale="de">
       {/* Add your first translated text */}
-      <FormattedMessage id="module.welcome" />
-      <MyFirstComponent />
-      <AdvancedLocalization />
+      {/* <select value={locale} onChange={onLocaleChange}>
+          <option value="en">English</option>
+          <option value="it">Italian</option>
+          <option value="de">German</option>
+      </select> */}
+      <FormattedMessage {...commonModule.welcome} />
+      {/* <SimpleComponent /> */}
+      {/* <AdvancedLocalization /> */}
       <ComponentInjection />
-    </IntlProvider>
+    </LocalizationProvider>
   );
 }
 

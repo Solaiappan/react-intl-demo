@@ -1,0 +1,15 @@
+{
+  "localization_modules": [
+    {
+      "name": "module3",
+      "version": 1,
+      "description": "Localization version for Module 3",
+      "localization_keys": [
+          {
+            "key": "componentInjection",
+            "default_value": "Want to search something?{break2}Go to <link-to-google>Google</link-to-google>",
+            "description": "Description of the componentInjection"
+          }
+      ]
+    }]
+}

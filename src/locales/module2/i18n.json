@@ -1,0 +1,40 @@
+{
+  "localization_modules": [
+    {
+      "name": "module2",
+      "version": 1,
+      "description": "Localization version for Module 2",
+      "localization_keys": [
+          {
+            "key": "advancedExample",
+            "default_value": "Simple Example",
+            "description": "Description of the Simple Example"
+          },
+          {
+            "key": "message1",
+            "default_value": "I have {catCount} cats and {dogCount} dogs",
+            "description": "Message 1 description"
+          },
+          {
+            "key": "message2",
+            "default_value": "Almost {pctBlack, number, ::percent} of them are black.",
+            "description": "Message 2 description"
+          },
+          {
+            "key": "message3",
+            "default_value": "Coupon expires at {expires, time, short}.",
+            "description": "Message 3 description"
+          },
+          {
+            "key": "message4",
+            "default_value": "{gender, select, male {He} female {She} other {They}} will respond shortly.",
+            "description": "Message 4 description"
+          },
+          {
+            "key": "message5",
+            "default_value": "You have {itemCount, plural, =0 {no items} one {1 item} other {{itemCount} items}}.",
+            "description": "Message 5 description"
+          }
+      ]
+    }]
+}

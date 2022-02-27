@@ -1,0 +1,25 @@
+{
+  "localization_modules": [
+    {
+      "name": "module1",
+      "version": 1,
+      "description": "Localization version for Module1",
+      "localization_keys": [
+          {
+            "key": "simpleExample",
+            "default_value": "Simple Example",
+            "description": "Description of the Simple Example"
+          },
+          {
+            "key": "button-title",
+            "default_value": "Tooltip for welcome button",
+            "description": "Welcome button Tooltip"
+          },
+          {
+            "key": "button-text",
+            "default_value": "Welcome button",
+            "description": "Welcome button text"
+          }
+      ]
+    }]
+}
