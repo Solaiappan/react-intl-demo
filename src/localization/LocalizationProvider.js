@@ -8,17 +8,13 @@ const LocalizationProvider = ({ locale, children }) => {
     useEffect(() => {
         fetch(`https://localization-schema-service.herokuapp.com/${locale}.json`)
             .then(response => response.json())
-            .then(data => setMessages(transformLocalizationJSON(data.modules)))
-            .catch((E) => console.log('Error in fetching localization.json', E));
-    }, []);
-    useEffect(() => {
-        fetch(`https://localization-schema-service.herokuapp.com/${locale}.json`)
-            .then(response => response.json())
             .then(data => {
                 setMessages(transformLocalizationJSON(data.modules));
                 setCurrentLocale(locale);
             })
-            .catch((E) => console.log('Error in fetching localization.json', E));
+            .catch((E) => {
+                setMessages({});
+            });
     }, [locale, children]);
   return (
     <IntlProvider locale={currentLocale} defaultLocale={currentLocale} messages={messages}>
